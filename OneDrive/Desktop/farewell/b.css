@@ -1,0 +1,162 @@
+:root {
+    --cream: #f3e5ab;
+    --gold-gradient: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c);
+    --soft-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(188, 188, 243);
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+#main-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- ENVELOPE DESIGN --- */
+#envelope-shell {
+    position: relative;
+    width: 300px;
+    height: 220px;
+    transition: all 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    z-index: 10;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cream);
+    box-shadow: var(--soft-shadow);
+    border-radius: 4px;
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 110px solid #e6d8a0;
+    z-index: 2;
+}
+
+.pocket {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cream);
+    border: 1px solid rgba(0,0,0,0.03);
+    z-index: 1;
+}
+
+/* --- GOLDEN RIBBON --- */
+.ribbon-v {
+    position: absolute;
+    left: 50%;
+    width: 35px;
+    height: 100%;
+    background: var(--gold-gradient);
+    transform: translateX(-50%);
+    z-index: 3;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.ribbon-h {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 35px;
+    background: var(--gold-gradient);
+    transform: translateY(-50%);
+    z-index: 3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- CARTOON GOLD BOW --- */
+.bow-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 60px;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.bow-center {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--gold-gradient);
+    border: 2px solid #8a6d3b;
+    border-radius: 8px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bow-loop-l, .bow-loop-r {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--gold-gradient);
+    border: 2px solid #8a6d3b;
+    border-radius: 50% 50% 0 50%;
+}
+
+.bow-loop-l { left: 0; transform: rotate(-15deg); }
+.bow-loop-r { right: 0; transform: rotate(105deg); border-radius: 50% 50% 50% 0; }
+
+.instruction {
+    text-align: center;
+    color: #8a6d3b;
+    margin-top: 30px;
+    font-weight: bold;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink { 50% { opacity: 0.3; } }
+
+/* --- THE REVEAL (INVITATION) --- */
+#invitation-box {
+    position: absolute;
+    width: 85vw;
+    max-width: 350px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 5;
+}
+
+#invite-img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.2);
+}
+
+.hidden { display: none; }
+
+/* Magic Vanish Class */
+.vanish {
+    opacity: 0 !important;
+    transform: scale(0.2) rotate(10deg) !important;
+    filter: blur(20px);
+}
+
+.show-invite {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
