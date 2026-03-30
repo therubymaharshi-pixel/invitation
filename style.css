@@ -61,7 +61,7 @@ body {
     height: 0;
     border-left: 160px solid transparent;
     border-right: 160px solid transparent;
-    border-top: 125px solid #5ae6a4; /* Dusty Rose tint */
+    border-top: 125px solid #acfac3; /* Dusty Rose tint */
     z-index: 2;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
