@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BCA Farewell</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- The Envelope -->
+        <div class="envelope-container" id="envelope" onclick="openEnvelope()">
+            <!-- The Quote is now INSIDE and ON TOP of the envelope -->
+            <h1 class="farewell-quote">"We came as strangers, we leave as memories."</h1>
+            
+            <div class="flap"></div>
+            <div class="wax-seal"></div>
+            <p class="tap-text">TAP TO OPEN</p>
+        </div>
+
+        <!-- The Invitation -->
+        <div id="invitation-container" class="hidden">
+            <img src="go2.png" alt="Invitation" class="invitation-img">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
