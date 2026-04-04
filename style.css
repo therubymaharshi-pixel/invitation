@@ -106,7 +106,7 @@ body {
     bottom: 20px;
     width: 100%;
     text-align: center;
-    color: #cc720c;
+    color: #d67f1c;
     font-size: 0.65rem;
     font-weight: bold;
     letter-spacing: 2px;
@@ -123,7 +123,7 @@ body {
     .flap {
         border-left: 140px solid transparent;
         border-right: 140px solid transparent;
-        border-top: 100px solid #e2c7b8;
+        border-top: 100px solid #acfac3;
     }
     .wax-seal {
         top: 80px;
