@@ -15,7 +15,7 @@ function openEnvelope() {
             
             // 2. Confetti Blast for Graduation
             const end = Date.now() + (2 * 1000);
-            const colors = ['#f1e14e', '#ee62d0', '#ffffff'];
+            const colors = ['#eeda29', '#f311c2', '#ffffff'];
 
             (function frame() {
               confetti({
